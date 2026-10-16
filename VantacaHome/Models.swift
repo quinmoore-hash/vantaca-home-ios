@@ -73,17 +73,26 @@ enum MockData {
     }
 }
 
-enum AuthError: Error {
+enum AuthError: LocalizedError {
     case invalidCredentials
+
+    var errorDescription: String? {
+        "Incorrect user name or password. Please try again."
+    }
 }
 
 enum AuthService {
     static func login(username: String, password: String) async throws -> User {
         try await Task.sleep(nanoseconds: 600_000_000)
-        guard let user = MockData.users.first(where: { $0.username == username && $0.password == password }) else {
+        let username = normalized(username)
+        guard let user = MockData.users.first(where: { normalized($0.username) == username && $0.password == password }) else {
             throw AuthError.invalidCredentials
         }
         return user
+    }
+
+    static func normalized(_ username: String) -> String {
+        username.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
     }
 }
 

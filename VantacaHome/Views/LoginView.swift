@@ -22,6 +22,8 @@ struct LoginView: View {
                 FieldLabel(text: "User Name")
                 TextField("", text: $username)
                     .textContentType(.username)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
                     .boxed()
                     .accessibilityIdentifier("username")
 
@@ -58,8 +60,10 @@ struct LoginView: View {
             do {
                 let user = try await AuthService.login(username: username, password: password)
                 session.signIn(user)
+            } catch AuthError.invalidCredentials {
+                errorMessage = AuthError.invalidCredentials.errorDescription
             } catch {
-                errorMessage = "System error. Please try again later."
+                errorMessage = "Something went wrong. Please try again."
             }
             isLoading = false
         }
