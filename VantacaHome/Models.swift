@@ -35,6 +35,40 @@ struct HomeAccount: Identifiable {
     var autoDraftEnabled = false
 }
 
+struct AssociationFinancials {
+    let operatingBalance: Double
+    let reserveBalance: Double
+    let collectedThisMonth: Double
+    let budgetThisMonth: Double
+    let delinquencyTotal: Double
+    let delinquentAccounts: Int
+
+    var collectedRatio: Double { budgetThisMonth > 0 ? min(1, collectedThisMonth / budgetThisMonth) : 0 }
+}
+
+enum ApprovalStatus: String {
+    case pending = "Pending"
+    case approved = "Approved"
+    case denied = "Denied"
+}
+
+struct ApprovalRequest: Identifiable {
+    let id: String
+    let kind: String
+    let title: String
+    let detail: String
+    var amount: Double?
+    var status: ApprovalStatus = .pending
+}
+
+struct CommunityDocument: Identifiable {
+    let id: String
+    let title: String
+    let category: String
+    let updated: String
+    let body: String
+}
+
 enum MockData {
     static let users = [
         User(username: "jpolk", password: "Homeowner1!", name: "James Polk",
@@ -66,6 +100,33 @@ enum MockData {
         ]
     }
 
+    static let financials = AssociationFinancials(
+        operatingBalance: 142_380.55, reserveBalance: 318_904.12,
+        collectedThisMonth: 38_420.00, budgetThisMonth: 46_240.00,
+        delinquencyTotal: 12_615.00, delinquentAccounts: 23)
+
+    static func approvals() -> [ApprovalRequest] {
+        [
+            ApprovalRequest(id: "ARC-1042", kind: "Architectural Request", title: "Backyard fence replacement",
+                            detail: "2045 Madison Dr · 6 ft cedar privacy fence"),
+            ApprovalRequest(id: "ARC-1045", kind: "Architectural Request", title: "Solar panels on south roof",
+                            detail: "1812 Monroe Ct · 14 black-frame panels"),
+            ApprovalRequest(id: "INV-5531", kind: "Invoice", title: "GreenScape Landscaping - October",
+                            detail: "Common area mowing and mulch", amount: 4_850.00),
+            ApprovalRequest(id: "INV-5537", kind: "Invoice", title: "AquaClear Pool Services",
+                            detail: "Pool pump motor replacement", amount: 2_195.00)
+        ]
+    }
+
+    static let documents = [
+        CommunityDocument(id: "budget", title: "2027 Operating Budget", category: "Budget", updated: "Sep 30, 2026",
+                          body: "Total annual budget: $554,880\n\nLandscaping: $58,200\nPool & Amenities: $41,500\nUtilities: $96,300\nManagement Fees: $72,000\nInsurance: $64,880\nReserve Contribution: $120,000\nRepairs & Maintenance: $102,000\n\nMonthly assessment remains $68.00 per unit."),
+        CommunityDocument(id: "bylaws", title: "Association Bylaws", category: "Governing Documents", updated: "Mar 12, 2024",
+                          body: "Article III - Board of Directors\n\nThe affairs of the Association shall be managed by a Board of five (5) directors elected by the members. Directors serve staggered two-year terms.\n\nArticle IV - Meetings\n\nThe Board shall meet at least quarterly. A majority of directors constitutes a quorum."),
+        CommunityDocument(id: "minutes", title: "Board Meeting Minutes - September", category: "Meeting Minutes", updated: "Sep 18, 2026",
+                          body: "Present: J. Polk (President), A. Adams, T. Jefferson, D. Madison\n\n1. Approved August financials.\n2. Reviewed reserve study; pool resurfacing scheduled for spring.\n3. Tabled clubhouse rental policy to October meeting.\n\nMeeting adjourned at 8:12 PM.")
+    ]
+
     static let savedCards = ["Visa XXXX-XXXX-XXXX-1433", "Mastercard XXXX-XXXX-XXXX-0999"]
 
     private static func date(daysFromNow days: Int) -> Date {
@@ -93,6 +154,7 @@ final class AppSession: ObservableObject {
     @Published var company: ManagementCompany?
     @Published var accounts: [HomeAccount] = []
     @Published var selectedAccountID: String = ""
+    @Published var approvals: [ApprovalRequest] = []
 
     var selectedAccount: HomeAccount? {
         accounts.first { $0.id == selectedAccountID }
@@ -106,6 +168,17 @@ final class AppSession: ObservableObject {
         self.company = company
         accounts = MockData.accounts()
         selectedAccountID = accounts.first?.id ?? ""
+        approvals = user?.isBoardMember == true ? MockData.approvals() : []
+    }
+
+    var pendingApprovalCount: Int {
+        approvals.filter { $0.status == .pending }.count
+    }
+
+    func decide(approvalID: String, approve: Bool) {
+        guard let i = approvals.firstIndex(where: { $0.id == approvalID }),
+              approvals[i].status == .pending else { return }
+        approvals[i].status = approve ? .approved : .denied
     }
 
     func recordPayment(accountID: String, amount: Double, method: String, date: Date) {
@@ -123,5 +196,6 @@ final class AppSession: ObservableObject {
         user = nil
         company = nil
         accounts = []
+        approvals = []
     }
 }

@@ -11,6 +11,7 @@
 		21189A52A1566602476986CE /* PaymentHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6667A71A913EB62B86FC90C /* PaymentHistoryView.swift */; };
 		426CB0D432FE4C962337B50F /* MakePaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF1E2A7F08C0CF5B24618A /* MakePaymentView.swift */; };
 		4947375B828CC8B8F7AD87B4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB53268856A24B6EBFE0AB /* Theme.swift */; };
+		53F483EF1E84B36582CEDE48 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD03D809F8FBF735D059AA7 /* BoardView.swift */; };
 		6C3E562065F632C67D180A26 /* AuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64A774C401BE4592030B /* AuthServiceTests.swift */; };
 		705CE761E53DC758868C494A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED34D5E4DBBE5CC03850464 /* LoginView.swift */; };
 		9461D80A5EE15AB9DE731F66 /* AutoDraftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422060BDF06C19DB6A09B6BE /* AutoDraftView.swift */; };
@@ -19,6 +20,7 @@
 		C2B501825FE5D5DA33ECF956 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C90F0EF46ECD2BB28C4255 /* Models.swift */; };
 		CF161B79D878E4130B13457F /* SelectCompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8AE06148D4672EF86557F /* SelectCompanyView.swift */; };
 		E46172912D2D0F4ABD3D51C4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A24EAD912C4A2F2649520C /* ProfileView.swift */; };
+		E8E5BE571E1BC5DA828638C4 /* BoardApprovalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14105AAF8552690C93E14916 /* BoardApprovalTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* Begin PBXFileReference section */
 		0EBF1E2A7F08C0CF5B24618A /* MakePaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePaymentView.swift; sourceTree = "<group>"; };
 		13894CD0D827C445E716BF93 /* VantacaHomeTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = VantacaHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14105AAF8552690C93E14916 /* BoardApprovalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardApprovalTests.swift; sourceTree = "<group>"; };
 		27CB53268856A24B6EBFE0AB /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		422060BDF06C19DB6A09B6BE /* AutoDraftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoDraftView.swift; sourceTree = "<group>"; };
 		43C90F0EF46ECD2BB28C4255 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -43,6 +46,7 @@
 		AB8722F2A47EA570A136A977 /* VantacaHome.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VantacaHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B8AE06148D4672EF86557F /* SelectCompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCompanyView.swift; sourceTree = "<group>"; };
 		C8C8308A1E40069F15344E13 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		CFD03D809F8FBF735D059AA7 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		DE7A64A774C401BE4592030B /* AuthServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceTests.swift; sourceTree = "<group>"; };
 		EED34D5E4DBBE5CC03850464 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F6667A71A913EB62B86FC90C /* PaymentHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHistoryView.swift; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				422060BDF06C19DB6A09B6BE /* AutoDraftView.swift */,
+				CFD03D809F8FBF735D059AA7 /* BoardView.swift */,
 				647E450A96C52DA331591675 /* HomeView.swift */,
 				EED34D5E4DBBE5CC03850464 /* LoginView.swift */,
 				C8C8308A1E40069F15344E13 /* MainTabView.swift */,
@@ -97,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				DE7A64A774C401BE4592030B /* AuthServiceTests.swift */,
+				14105AAF8552690C93E14916 /* BoardApprovalTests.swift */,
 			);
 			path = VantacaHomeTests;
 			sourceTree = "<group>";
@@ -176,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C3E562065F632C67D180A26 /* AuthServiceTests.swift in Sources */,
+				E8E5BE571E1BC5DA828638C4 /* BoardApprovalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9461D80A5EE15AB9DE731F66 /* AutoDraftView.swift in Sources */,
+				53F483EF1E84B36582CEDE48 /* BoardView.swift in Sources */,
 				0108A5DA32759566D94F724B /* HomeView.swift in Sources */,
 				705CE761E53DC758868C494A /* LoginView.swift in Sources */,
 				959223F1DB1B24A2982F5ED6 /* MainTabView.swift in Sources */,
