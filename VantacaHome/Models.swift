@@ -2,7 +2,7 @@ import SwiftUI
 
 struct User {
     let username: String
-    let password: String
+    var password: String
     let name: String
     let email: String
     let phone: String
@@ -36,7 +36,7 @@ struct HomeAccount: Identifiable {
 }
 
 enum MockData {
-    static let users = [
+    static let seedUsers = [
         User(username: "jpolk", password: "Homeowner1!", name: "James Polk",
              email: "james.polk@vantaca.tst", phone: "(212) 555-1212", isBoardMember: true)
     ]
@@ -75,15 +75,108 @@ enum MockData {
 
 enum AuthError: Error {
     case invalidCredentials
+    case userNotFound
+    case invalidCode
+    case unknownAccount
+    case invalidEmail
+    case invalidUsername
+    case usernameTaken
+    case emailTaken
+    case weakPassword
+    case passwordMismatch
+
+    var message: String {
+        switch self {
+        case .invalidCredentials: return "System error. Please try again later."
+        case .userNotFound: return "We couldn't find a user with that user name or email."
+        case .invalidCode: return "That code is incorrect. Please check it and try again."
+        case .unknownAccount: return "We couldn't find that account number. It's printed on your HOA statement."
+        case .invalidEmail: return "Please enter a valid email address."
+        case .invalidUsername: return "User name must be at least 4 characters with no spaces."
+        case .usernameTaken: return "That user name is already taken."
+        case .emailTaken: return "An account with that email already exists."
+        case .weakPassword: return "Password must be at least 8 characters and include a number."
+        case .passwordMismatch: return "Passwords do not match."
+        }
+    }
 }
 
-enum AuthService {
-    static func login(username: String, password: String) async throws -> User {
-        try await Task.sleep(nanoseconds: 600_000_000)
-        guard let user = MockData.users.first(where: { $0.username == username && $0.password == password }) else {
+/// In-memory user store (mock backend). State resets when the app restarts.
+final class UserStore {
+    static let shared = UserStore()
+
+    private(set) var users: [User]
+    private var resetCodes: [String: String] = [:]
+    private let accountNumbers: Set<String>
+
+    init(users: [User] = MockData.seedUsers, accountNumbers: Set<String> = Set(MockData.accounts().map(\.id))) {
+        self.users = users
+        self.accountNumbers = accountNumbers
+    }
+
+    func authenticate(username: String, password: String) throws -> User {
+        guard let user = users.first(where: { $0.username == username && $0.password == password }) else {
             throw AuthError.invalidCredentials
         }
         return user
+    }
+
+    /// Looks up a user by user name or email and returns a mock 6-digit code (shown in the UI, no email is sent).
+    func requestPasswordReset(for identifier: String) throws -> String {
+        guard let user = find(identifier) else { throw AuthError.userNotFound }
+        let code = String(format: "%06d", Int.random(in: 0...999_999))
+        resetCodes[user.username] = code
+        return code
+    }
+
+    func resetPassword(for identifier: String, code: String, newPassword: String, confirm: String) throws {
+        guard let i = index(of: identifier) else { throw AuthError.userNotFound }
+        guard let expected = resetCodes[users[i].username], expected == code.trimmingCharacters(in: .whitespaces) else {
+            throw AuthError.invalidCode
+        }
+        try Self.validate(password: newPassword, confirm: confirm)
+        users[i].password = newPassword
+        resetCodes[users[i].username] = nil
+    }
+
+    func register(accountNumber: String, email: String, username: String, password: String, confirm: String) throws -> User {
+        let account = accountNumber.trimmingCharacters(in: .whitespaces)
+        let email = email.trimmingCharacters(in: .whitespaces)
+        let username = username.trimmingCharacters(in: .whitespaces)
+        guard accountNumbers.contains(account) else { throw AuthError.unknownAccount }
+        guard email.contains("@"), email.split(separator: "@").last?.contains(".") == true else { throw AuthError.invalidEmail }
+        guard username.count >= 4, !username.contains(" ") else { throw AuthError.invalidUsername }
+        guard find(username) == nil else { throw AuthError.usernameTaken }
+        guard find(email) == nil else { throw AuthError.emailTaken }
+        try Self.validate(password: password, confirm: confirm)
+        let user = User(username: username, password: password, name: username, email: email, phone: "", isBoardMember: false)
+        users.append(user)
+        return user
+    }
+
+    static func validate(password: String, confirm: String) throws {
+        guard password.count >= 8, password.contains(where: \.isNumber) else { throw AuthError.weakPassword }
+        guard password == confirm else { throw AuthError.passwordMismatch }
+    }
+
+    private func index(of identifier: String) -> Int? {
+        let key = identifier.trimmingCharacters(in: .whitespaces).lowercased()
+        return users.firstIndex { $0.username.lowercased() == key || $0.email.lowercased() == key }
+    }
+
+    func user(matching identifier: String) -> User? {
+        index(of: identifier).map { users[$0] }
+    }
+
+    private func find(_ identifier: String) -> User? { user(matching: identifier) }
+}
+
+enum AuthService {
+    static var store = UserStore.shared
+
+    static func login(username: String, password: String) async throws -> User {
+        try await Task.sleep(nanoseconds: 600_000_000)
+        return try store.authenticate(username: username, password: password)
     }
 }
 
