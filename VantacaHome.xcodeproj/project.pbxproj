@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0108A5DA32759566D94F724B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647E450A96C52DA331591675 /* HomeView.swift */; };
+		21189A52A1566602476986CE /* PaymentHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6667A71A913EB62B86FC90C /* PaymentHistoryView.swift */; };
+		426CB0D432FE4C962337B50F /* MakePaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF1E2A7F08C0CF5B24618A /* MakePaymentView.swift */; };
+		4947375B828CC8B8F7AD87B4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB53268856A24B6EBFE0AB /* Theme.swift */; };
+		6C3E562065F632C67D180A26 /* AuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64A774C401BE4592030B /* AuthServiceTests.swift */; };
+		705CE761E53DC758868C494A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED34D5E4DBBE5CC03850464 /* LoginView.swift */; };
+		9461D80A5EE15AB9DE731F66 /* AutoDraftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422060BDF06C19DB6A09B6BE /* AutoDraftView.swift */; };
+		959223F1DB1B24A2982F5ED6 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C8308A1E40069F15344E13 /* MainTabView.swift */; };
+		B19116240DA304BAF7783245 /* VantacaHomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3A2D3F6A4E32CD796180F /* VantacaHomeApp.swift */; };
+		C2B501825FE5D5DA33ECF956 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C90F0EF46ECD2BB28C4255 /* Models.swift */; };
+		CF161B79D878E4130B13457F /* SelectCompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8AE06148D4672EF86557F /* SelectCompanyView.swift */; };
+		E46172912D2D0F4ABD3D51C4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A24EAD912C4A2F2649520C /* ProfileView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F79B827D3A776830390E380B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33BA6B5DA188059991694DB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 673F67BF83DD60F12C7A9F62;
+			remoteInfo = VantacaHome;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0EBF1E2A7F08C0CF5B24618A /* MakePaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePaymentView.swift; sourceTree = "<group>"; };
+		13894CD0D827C445E716BF93 /* VantacaHomeTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = VantacaHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27CB53268856A24B6EBFE0AB /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		422060BDF06C19DB6A09B6BE /* AutoDraftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoDraftView.swift; sourceTree = "<group>"; };
+		43C90F0EF46ECD2BB28C4255 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		647E450A96C52DA331591675 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6BB3A2D3F6A4E32CD796180F /* VantacaHomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VantacaHomeApp.swift; sourceTree = "<group>"; };
+		A3A24EAD912C4A2F2649520C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		AB8722F2A47EA570A136A977 /* VantacaHome.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VantacaHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B8AE06148D4672EF86557F /* SelectCompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCompanyView.swift; sourceTree = "<group>"; };
+		C8C8308A1E40069F15344E13 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		DE7A64A774C401BE4592030B /* AuthServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceTests.swift; sourceTree = "<group>"; };
+		EED34D5E4DBBE5CC03850464 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F6667A71A913EB62B86FC90C /* PaymentHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHistoryView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		06BDA1CD7FC8EE2F93527BCC /* VantacaHome */ = {
+			isa = PBXGroup;
+			children = (
+				43C90F0EF46ECD2BB28C4255 /* Models.swift */,
+				27CB53268856A24B6EBFE0AB /* Theme.swift */,
+				6BB3A2D3F6A4E32CD796180F /* VantacaHomeApp.swift */,
+				4D395988ED7CECE6F30140AD /* Views */,
+			);
+			path = VantacaHome;
+			sourceTree = "<group>";
+		};
+		4D395988ED7CECE6F30140AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				422060BDF06C19DB6A09B6BE /* AutoDraftView.swift */,
+				647E450A96C52DA331591675 /* HomeView.swift */,
+				EED34D5E4DBBE5CC03850464 /* LoginView.swift */,
+				C8C8308A1E40069F15344E13 /* MainTabView.swift */,
+				0EBF1E2A7F08C0CF5B24618A /* MakePaymentView.swift */,
+				F6667A71A913EB62B86FC90C /* PaymentHistoryView.swift */,
+				A3A24EAD912C4A2F2649520C /* ProfileView.swift */,
+				C0B8AE06148D4672EF86557F /* SelectCompanyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4E3C8FA31C3C8E14043DE8C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB8722F2A47EA570A136A977 /* VantacaHome.app */,
+				13894CD0D827C445E716BF93 /* VantacaHomeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		822D980558FD112A64C46194 = {
+			isa = PBXGroup;
+			children = (
+				06BDA1CD7FC8EE2F93527BCC /* VantacaHome */,
+				85146D38264DB4DDDF567F64 /* VantacaHomeTests */,
+				4E3C8FA31C3C8E14043DE8C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		85146D38264DB4DDDF567F64 /* VantacaHomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE7A64A774C401BE4592030B /* AuthServiceTests.swift */,
+			);
+			path = VantacaHomeTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		502C3C26FCF0090828797B63 /* VantacaHomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F3147E85370E9152205FB35 /* Build configuration list for PBXNativeTarget "VantacaHomeTests" */;
+			buildPhases = (
+				56B5D8ADDD810B9C7D78DD1D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACAB2261EA7DD69BE924F8DA /* PBXTargetDependency */,
+			);
+			name = VantacaHomeTests;
+			packageProductDependencies = (
+			);
+			productName = VantacaHomeTests;
+			productReference = 13894CD0D827C445E716BF93 /* VantacaHomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		673F67BF83DD60F12C7A9F62 /* VantacaHome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFF5DD99A7B552235F9DD9E3 /* Build configuration list for PBXNativeTarget "VantacaHome" */;
+			buildPhases = (
+				F0B644B69E07AC2861609C7A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VantacaHome;
+			packageProductDependencies = (
+			);
+			productName = VantacaHome;
+			productReference = AB8722F2A47EA570A136A977 /* VantacaHome.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33BA6B5DA188059991694DB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = CA4D1C7AC40DCBAB43EA76D5 /* Build configuration list for PBXProject "VantacaHome" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 822D980558FD112A64C46194;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4E3C8FA31C3C8E14043DE8C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				673F67BF83DD60F12C7A9F62 /* VantacaHome */,
+				502C3C26FCF0090828797B63 /* VantacaHomeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56B5D8ADDD810B9C7D78DD1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C3E562065F632C67D180A26 /* AuthServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0B644B69E07AC2861609C7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9461D80A5EE15AB9DE731F66 /* AutoDraftView.swift in Sources */,
+				0108A5DA32759566D94F724B /* HomeView.swift in Sources */,
+				705CE761E53DC758868C494A /* LoginView.swift in Sources */,
+				959223F1DB1B24A2982F5ED6 /* MainTabView.swift in Sources */,
+				426CB0D432FE4C962337B50F /* MakePaymentView.swift in Sources */,
+				C2B501825FE5D5DA33ECF956 /* Models.swift in Sources */,
+				21189A52A1566602476986CE /* PaymentHistoryView.swift in Sources */,
+				E46172912D2D0F4ABD3D51C4 /* ProfileView.swift in Sources */,
+				CF161B79D878E4130B13457F /* SelectCompanyView.swift in Sources */,
+				4947375B828CC8B8F7AD87B4 /* Theme.swift in Sources */,
+				B19116240DA304BAF7783245 /* VantacaHomeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACAB2261EA7DD69BE924F8DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 673F67BF83DD60F12C7A9F62 /* VantacaHome */;
+			targetProxy = F79B827D3A776830390E380B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3034C3914CB0EB5EE4253030 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.VantacaHomeTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VantacaHome.app/VantacaHome";
+			};
+			name = Debug;
+		};
+		503FE0319E1D4622A7BD90A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Vantaca Home";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.vantacahome;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		706EEDB699D11EF30E247043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.VantacaHomeTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VantacaHome.app/VantacaHome";
+			};
+			name = Release;
+		};
+		81F2BA7BE37664B8205EEAA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		89760E0F6D88F9BF97C9B9AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Vantaca Home";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.vantacahome;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A387CC4A7DC224BD2B000A53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F3147E85370E9152205FB35 /* Build configuration list for PBXNativeTarget "VantacaHomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3034C3914CB0EB5EE4253030 /* Debug */,
+				706EEDB699D11EF30E247043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CA4D1C7AC40DCBAB43EA76D5 /* Build configuration list for PBXProject "VantacaHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A387CC4A7DC224BD2B000A53 /* Debug */,
+				81F2BA7BE37664B8205EEAA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FFF5DD99A7B552235F9DD9E3 /* Build configuration list for PBXNativeTarget "VantacaHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89760E0F6D88F9BF97C9B9AE /* Debug */,
+				503FE0319E1D4622A7BD90A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 33BA6B5DA188059991694DB5 /* Project object */;
+}
