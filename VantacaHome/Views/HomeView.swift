@@ -38,6 +38,22 @@ struct HomeView: View {
                         }
                     }
 
+                    if let latest = session.feed().first {
+                        Card {
+                            HStack {
+                                Text("Latest Announcement").font(.headline).foregroundStyle(Color.vText)
+                                Spacer()
+                                NavigationLink("See All") { AnnouncementsView() }.font(.subheadline)
+                            }
+                            NavigationLink {
+                                AnnouncementDetailView(announcement: latest)
+                            } label: {
+                                AnnouncementRow(announcement: latest, isRead: session.isRead(latest))
+                            }
+                            .buttonStyle(.plain)
+                        }
+                    }
+
                     Card {
                         HStack {
                             Text("Recent Payments").font(.headline).foregroundStyle(Color.vText)
