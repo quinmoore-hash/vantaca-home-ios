@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		0108A5DA32759566D94F724B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647E450A96C52DA331591675 /* HomeView.swift */; };
 		21189A52A1566602476986CE /* PaymentHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6667A71A913EB62B86FC90C /* PaymentHistoryView.swift */; };
+		2A2C9140B5F0920D7125A573 /* AnnouncementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F2412DB62DCC9B91E84799 /* AnnouncementsTests.swift */; };
 		426CB0D432FE4C962337B50F /* MakePaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF1E2A7F08C0CF5B24618A /* MakePaymentView.swift */; };
 		4947375B828CC8B8F7AD87B4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB53268856A24B6EBFE0AB /* Theme.swift */; };
 		6C3E562065F632C67D180A26 /* AuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A64A774C401BE4592030B /* AuthServiceTests.swift */; };
 		705CE761E53DC758868C494A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED34D5E4DBBE5CC03850464 /* LoginView.swift */; };
 		9461D80A5EE15AB9DE731F66 /* AutoDraftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422060BDF06C19DB6A09B6BE /* AutoDraftView.swift */; };
 		959223F1DB1B24A2982F5ED6 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C8308A1E40069F15344E13 /* MainTabView.swift */; };
+		A5D2BDD026B5F828E99E535B /* AnnouncementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AA432388E763B4CA23FCFD /* AnnouncementsView.swift */; };
 		B19116240DA304BAF7783245 /* VantacaHomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3A2D3F6A4E32CD796180F /* VantacaHomeApp.swift */; };
 		C2B501825FE5D5DA33ECF956 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C90F0EF46ECD2BB28C4255 /* Models.swift */; };
 		CF161B79D878E4130B13457F /* SelectCompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8AE06148D4672EF86557F /* SelectCompanyView.swift */; };
@@ -35,6 +37,8 @@
 		0EBF1E2A7F08C0CF5B24618A /* MakePaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePaymentView.swift; sourceTree = "<group>"; };
 		13894CD0D827C445E716BF93 /* VantacaHomeTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = VantacaHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CB53268856A24B6EBFE0AB /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		35F2412DB62DCC9B91E84799 /* AnnouncementsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsTests.swift; sourceTree = "<group>"; };
+		37AA432388E763B4CA23FCFD /* AnnouncementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsView.swift; sourceTree = "<group>"; };
 		422060BDF06C19DB6A09B6BE /* AutoDraftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoDraftView.swift; sourceTree = "<group>"; };
 		43C90F0EF46ECD2BB28C4255 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		647E450A96C52DA331591675 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 		4D395988ED7CECE6F30140AD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				37AA432388E763B4CA23FCFD /* AnnouncementsView.swift */,
 				422060BDF06C19DB6A09B6BE /* AutoDraftView.swift */,
 				647E450A96C52DA331591675 /* HomeView.swift */,
 				EED34D5E4DBBE5CC03850464 /* LoginView.swift */,
@@ -96,6 +101,7 @@
 		85146D38264DB4DDDF567F64 /* VantacaHomeTests */ = {
 			isa = PBXGroup;
 			children = (
+				35F2412DB62DCC9B91E84799 /* AnnouncementsTests.swift */,
 				DE7A64A774C401BE4592030B /* AuthServiceTests.swift */,
 			);
 			path = VantacaHomeTests;
@@ -175,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A2C9140B5F0920D7125A573 /* AnnouncementsTests.swift in Sources */,
 				6C3E562065F632C67D180A26 /* AuthServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D2BDD026B5F828E99E535B /* AnnouncementsView.swift in Sources */,
 				9461D80A5EE15AB9DE731F66 /* AutoDraftView.swift in Sources */,
 				0108A5DA32759566D94F724B /* HomeView.swift in Sources */,
 				705CE761E53DC758868C494A /* LoginView.swift in Sources */,

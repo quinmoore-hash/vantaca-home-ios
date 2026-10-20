@@ -7,6 +7,7 @@ A simple SwiftUI replica of the **Home by Vantaca** homeowner app, built for a D
 - **Select Management Company**
 - **Home**: account picker, current balance, recent payments
 - **Make a Payment** and **Auto-Draft** enrollment
+- **Community**: announcements feed (pinned first, category filter, unread badge) with a Latest Announcement card on Home
 - **Payments** history and **Account** (profile, switch company, log out)
 
 ## Run
